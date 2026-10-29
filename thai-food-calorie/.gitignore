@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pt
+weights/
+runs/
+datasets/
+eval/images/
+eval/results.csv
+eval/ground_truth.csv
+.DS_Store
