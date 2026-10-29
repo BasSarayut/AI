@@ -12,7 +12,7 @@ license: agpl-3.0
 
 # Thai Food Calorie Estimator
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<YOUR_USERNAME>/thai-food-calorie/blob/main/notebooks/train_yolo_thai_food.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/BasSarayut/AI/blob/main/thai-food-calorie/notebooks/train_yolo_thai_food.ipynb)
 
 Detect Thai dishes in a photo with a custom-trained YOLO model and estimate total calories, shown as a range rather than a single misleading number.
 
@@ -94,10 +94,10 @@ python scripts/evaluate_calories.py --model weights/best.pt \
 
 1. Create a new Space with SDK **Gradio**.
 2. In the Space settings, add a Variable `HF_MODEL_REPO` = `<user>/thai-food-yolo` (the model repo uploaded from the notebook).
-3. Push this repo to the Space:
+3. This project lives in the `thai-food-calorie/` subfolder of the [BasSarayut/AI](https://github.com/BasSarayut/AI) repo, but a Space needs `app.py` at its root. Push only the subfolder, from the repo root:
    ```bash
    git remote add space https://huggingface.co/spaces/<user>/thai-food-calorie
-   git push space main
+   git subtree push --prefix thai-food-calorie space main
    ```
 
 ## Project structure
